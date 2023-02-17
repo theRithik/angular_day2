@@ -1,0 +1,40 @@
+<h1>{{name}}Employees</h1>
+<table class="table">
+    <thead class="bg-dark">
+      <tr>
+        <th scope="col">Employee ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Salary</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody style="color:black">
+      <tr  *ngIf="value==='edit';">
+          <td scope="col">{{id}}</td>
+        <td scope="col">{{fname}}</td>
+        <td scope="col">{{lname}} </td>
+        <td scope="col">{{salary}} </td>
+        <td scope="col">{{dob}} </td>
+        <td scope="col">{{email}} </td>
+        <td scope="col"><button class="btn btn-primary" (click)="onClick()">edit</button> </td>
+        </tr>
+
+      
+        <tr *ngIf="value==='submit'">
+        <td scope="col"><input type="text" [(ngModel)]="id" > </td>
+        <td scope="col"><input type="text" [(ngModel)]="fname" > </td>
+        <td scope="col"><input type="text" [(ngModel)]="lname"> </td>
+        <td scope="col"><input type="text" [(ngModel)]="salary"> </td>
+        <td scope="col"><input type="text" [(ngModel)]="dob"> </td>
+        <td scope="col"><input type="text" [(ngModel)]="email"> </td>
+        <td scope="col"><button class="btn btn-primary" (click)="onClick2()">submit</button> </td>
+      </tr>
+   
+
+    </tbody>
+
+
+    
